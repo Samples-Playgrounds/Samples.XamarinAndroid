@@ -1,27 +1,30 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V7.App;
 
 namespace hitherejoe
 {
-    [Activity(Label = "hitherejoe", MainLauncher = true, Icon = "@mipmap/icon")]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "hitherejoe", MainLauncher = true, Icon = "@mipmap/icon", Theme = "@style/AppTheme")]
+    public class MainActivity : Android.Support.V7.App.AppCompatActivity
     {
-        int count = 1;
+        private TextView textFavorites;
+        private TextView textSchedules;
+        private TextView textMusic;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.activity_main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
+            Android.Support.Design.Widget.BottomNavigationView bottomNavigationView = null;
+            bottomNavigationView = FindViewById<Android.Support.Design.Widget.BottomNavigationView>(Resource.Id.bottom_navigation);
 
-            button.Click += delegate { button.Text = $"{count++} clicks!"; };
+            int icon_size = bottomNavigationView.ItemIconSize;
+
+            return;
         }
     }
 }
