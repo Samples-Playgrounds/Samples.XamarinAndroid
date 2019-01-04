@@ -19,6 +19,9 @@ namespace NealRDC
             Android.Support.Design.Widget.BottomNavigationView bottomNavigationView = null;
             bottomNavigationView = FindViewById<Android.Support.Design.Widget.BottomNavigationView>(Resource.Id.navigation);
 
+            int icon_size = bottomNavigationView.ItemIconSize;
+
+            return;
         }
     }
 }
