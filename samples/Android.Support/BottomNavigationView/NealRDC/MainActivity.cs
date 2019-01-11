@@ -21,6 +21,28 @@ namespace NealRDC
 
             int icon_size = bottomNavigationView.ItemIconSize;
 
+            bottomNavigationView.NavigationItemSelected += (sender, e) =>
+            {
+                Android.Support.V4.App.Fragment selectedFragment = null;
+
+                switch (e.Item.ItemId)
+                {
+                    case Resource.Id.action_item1:
+                        selectedFragment = ItemOneFragment.NewInstance();
+                        break;
+                    case Resource.Id.action_item2:
+                        selectedFragment = ItemTwoFragment.NewInstance();
+                        break;
+                    case Resource.Id.action_item3:
+                        selectedFragment = ItemThreeFragment.NewInstance();
+                        break;
+                }
+
+                Android.Support.V4.App.FragmentTransaction transaction = this.SupportFragmentManager.BeginTransaction();
+                transaction.Replace(Resource.Id.frame_layout, selectedFragment);
+                transaction.Commit();
+            };
+
             return;
         }
     }

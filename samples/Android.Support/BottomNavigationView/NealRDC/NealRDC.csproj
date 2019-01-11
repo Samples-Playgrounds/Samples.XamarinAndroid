@@ -155,6 +155,9 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ItemOneFragment.cs" />
+    <Compile Include="ItemThreeFragment.cs" />
+    <Compile Include="ItemTwoFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
