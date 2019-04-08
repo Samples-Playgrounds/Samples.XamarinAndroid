@@ -1,0 +1,3 @@
+[submodule "externals/Xamarin.Android.Samples.Secret.Sensitive"]
+	path = externals/Xamarin.Android.Samples.Secret.Sensitive
+	url = https://gitlab.com/xamarin-support/xamarin.android.samples.secret.sensitive.shared.git
